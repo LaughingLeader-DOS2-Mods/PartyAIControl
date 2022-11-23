@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<save>
+    <header version="2" />
+    <version major="3" minor="6" revision="6" build="0" />
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="Module" value="47c9f413-b24e-451e-b40f-052ca037f890" type="23" />
+            <attribute id="Name" value="PartyAIControl" type="23" />
+            <attribute id="Type" value="Add-on" type="23" />
+            <attribute id="UUID" value="0002881b-6232-469d-b146-9bd12be95604" type="23" />
+        </node>
+    </region>
+</save>

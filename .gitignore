@@ -1,0 +1,122 @@
+# SourceControlGenerator #
+##########################
+SourceControlGenerator.json
+
+# Levels
+######################
+Mods/PartyAIControl_47c9f413-b24e-451e-b40f-052ca037f890/Levels/*
+Mods/PartyAIControl_47c9f413-b24e-451e-b40f-052ca037f890/Globals/*
+Editor/Mods/PartyAIControl_47c9f413-b24e-451e-b40f-052ca037f890/Levels/*
+
+# Story files        #
+######################
+*.div
+!story_header.div
+*.raw
+story_orphanqueries_ignore.txt
+Mods/PartyAIControl_47c9f413-b24e-451e-b40f-052ca037f890/Story/Dialogs/Autosave/*
+Mods/PartyAIControl_47c9f413-b24e-451e-b40f-052ca037f890/Story/Dialogs/Recovered/*
+
+# Asset Folders      #
+######################
+Public/PartyAIControl_47c9f413-b24e-451e-b40f-052ca037f890/Assets/*
+#Public/PartyAIControl_47c9f413-b24e-451e-b40f-052ca037f890/GUI/*
+
+# Editor files       #
+######################
+RootTemplateSelectorConfig_*
+ResourceSelectorConfig_*
+StatsEditorConfig.xml
+EffectEditorConfig.xml
+DockPanel.config
+EditorBrowserMetadata_*
+EditorBrowserMetadata.xml
+Autosave/*
+Recovered/*
+ReConHistory.txt
+story.debugInfo
+
+# Assets             #
+######################
+*.gr2
+*.dae
+*.swf
+*.bullet
+*.dds
+*.tga
+*.png
+*.ttf
+*.lsb
+*.lsf
+*.lsfx
+*.lsefx
+#*.lsx
+*.lsmg
+*.wem
+
+# Logs               #
+######################
+*.log
+*.ailog
+log.txt
+errors.txt
+dialoglog.txt
+personallog.txt
+
+# Binary Files       #
+######################
+*.dat
+*.data
+*.bik
+*.bnk
+*.bshd
+*.cur
+*.fnt
+*.iggy
+*.iggytex
+*.osi
+*.patch
+*.tmpl
+
+# Dump files         #
+######################
+*.stackdump
+*.dmp
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# VS Code #
+############
+launch.json
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.lnk
+
+
+
