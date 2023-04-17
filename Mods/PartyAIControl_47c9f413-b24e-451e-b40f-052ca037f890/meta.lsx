@@ -5,7 +5,17 @@
     <region id="Config">
         <node id="root">
             <children>
-                <node id="Dependencies" />
+                <node id="Dependencies">
+                    <children>
+                        <node id="ModuleShortDesc">
+                            <attribute id="Folder" value="LeaderLib_543d653f-446c-43d8-8916-54670ce24dd9" type="30" />
+                            <attribute id="MD5" value="" type="23" />
+                            <attribute id="Name" value="LeaderLib - Definitive Edition" type="22" />
+                            <attribute id="UUID" value="7e737d2f-31d2-4751-963f-be6ccc59cd0c" type="22" />
+                            <attribute id="Version" value="386465792" type="4" />
+                        </node>
+                    </children>
+                </node>
                 <node id="ModuleInfo">
                     <attribute id="Author" value="LaughingLeader" type="30" />
                     <attribute id="CharacterCreationLevelName" value="" type="22" />

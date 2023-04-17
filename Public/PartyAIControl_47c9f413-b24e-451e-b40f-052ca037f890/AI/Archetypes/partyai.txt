@@ -1,0 +1,8 @@
+// The maximum amount of consumables a charmed character can use per turn
+CHARMED_MAX_CONSUMABLES_PER_TURN				0
+
+//////////////////////////////////////////////////////////////////////////
+// Final Score MULTIPLIERS       
+// Used for when an action is free (0 AP cost) 
+MULTIPLIER_LOW_ITEM_AMOUNT_MULTIPLIER			0.0
+MULTIPLIER_HIGH_ITEM_AMOUNT_MULTIPLIER			0.0

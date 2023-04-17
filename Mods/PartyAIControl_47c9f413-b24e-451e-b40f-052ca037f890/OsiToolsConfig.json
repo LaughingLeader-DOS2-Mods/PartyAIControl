@@ -1,0 +1,8 @@
+{
+    "RequiredExtensionVersion": 57,
+    "ModTable": "LLPartyAIControl",
+    "FeatureFlags": [
+        "OsirisExtensions",
+        "Lua"
+    ]
+}
