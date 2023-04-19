@@ -1,8 +1,29 @@
+// Tries to avoid using items, and prioritizes healing players
+
 // The maximum amount of consumables a charmed character can use per turn
 CHARMED_MAX_CONSUMABLES_PER_TURN				0
 
 //////////////////////////////////////////////////////////////////////////
 // Final Score MULTIPLIERS       
-// Used for when an action is free (0 AP cost) 
 MULTIPLIER_LOW_ITEM_AMOUNT_MULTIPLIER			0.0
 MULTIPLIER_HIGH_ITEM_AMOUNT_MULTIPLIER			0.0
+
+// Used for destroying interesting items.
+MULTIPLIER_DESTROY_INTERESTING_ITEM				0.25
+
+// Healer will prefer to heal allies.
+MULTIPLIER_HEAL_ALLY_POS						1.2
+MULTIPLIER_HOT_ALLY_POS							1.2
+MULTIPLIER_BOOST_ALLY_POS		 				1.2
+MULTIPLIER_ARMOR_ALLY_POS		 				1.0
+
+MULTIPLIER_RESURRECT							6.00
+
+// If != 0 the active defense status can be used offensively by Ai instead of only defensively
+ENABLE_ACTIVE_DEFENSE_OFFENSIVE_USE				1
+
+// A general multiplier for all reflected damage
+MULTIPLIER_REFLECT_DAMAGE						0.05
+
+// Multiplier for buffs as the first action
+MULTIPLIER_FIRST_ACTION_BUFF					6.0
