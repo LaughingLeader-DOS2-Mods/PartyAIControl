@@ -22,12 +22,21 @@ end
 
 ---@param target EsvCharacter
 ---@param enabled boolean
----@param skipUpdateStatus boolean|nil
-function AIManager.SetControlEnabled(target, enabled, skipUpdateStatus)
+---@param skipUpdateStatus? boolean
+---@param skipStatusText? boolean
+function AIManager.SetControlEnabled(target, enabled, skipUpdateStatus, skipStatusText)
 	if enabled then
+		local displayStatusText = not skipStatusText and not target:HasTag(AIManager.Vars.EnabledTag)
 		Osi.SetTag(target.MyGuid, AIManager.Vars.EnabledTag)
+		if displayStatusText then
+			Osi.CharacterStatusText(target.MyGuid, "LLPARTYAI_StatusText_Enabled")
+		end
 	else
+		local displayStatusText = not skipStatusText and target:HasTag(AIManager.Vars.EnabledTag)
 		Osi.ClearTag(target.MyGuid, AIManager.Vars.EnabledTag)
+		if displayStatusText then
+			Osi.CharacterStatusText(target.MyGuid, "LLPARTYAI_StatusText_Disabled")
+		end
 	end
 	AIManager.OverrideArchetype(target, enabled)
 	if not skipUpdateStatus then
@@ -61,11 +70,16 @@ Ext.RegisterNetListener("LLPARTYAI_SetAISummonsEnabled", function (channel, payl
 	local data = Ext.Json.Parse(payload)
 	local target = GameHelpers.GetCharacter(data.NetID, "EsvCharacter")
 	if data.Enabled then
+		local displayStatusText = not target:HasTag(AIManager.Vars.EnabledSummonTag)
 		Osi.SetTag(target.MyGuid, AIManager.Vars.EnabledSummonTag)
+		if displayStatusText then
+			Osi.CharacterStatusText(target.MyGuid, "LLPARTYAI_StatusText_SummonsEnabled")
+		end
 	else
+		local displayStatusText = target:HasTag(AIManager.Vars.EnabledSummonTag)
 		Osi.ClearTag(target.MyGuid, AIManager.Vars.EnabledSummonTag)
-		for summon in GameHelpers.Character.GetSummons(target) do
-			AIManager.SetControlEnabled(summon, false)
+		if displayStatusText then
+			Osi.CharacterStatusText(target.MyGuid, "LLPARTYAI_StatusText_SummonsDisabled")
 		end
 	end
 end)
@@ -110,7 +124,7 @@ Events.Osiris.ObjectLostTag:Subscribe(function (e)
 end, {MatchArgs={Tag=AIManager.Vars.EnabledSummonTag, ObjectType="Character"}})
 
 Events.SummonChanged:Subscribe(function (e)
-	if e.Owner:HasTag(AIManager.Vars.EnabledSummonTag) then
+	if not e.Summon:HasTag("TOTEM") and e.Owner and e.Owner:HasTag(AIManager.Vars.EnabledSummonTag) then
 		AIManager.SetControlEnabled(e.Summon, true)
 	end
 end, {MatchArgs={IsDying=false, IsItem=false}})

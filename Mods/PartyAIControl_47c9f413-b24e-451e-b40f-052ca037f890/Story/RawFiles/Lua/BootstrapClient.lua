@@ -1,10 +1,10 @@
 Ext.Require("Shared.lua")
 
 local Text = {
-	EnableControl = Classes.TranslatedString:CreateFromKey("LLAICONTROL_UI_EnableControl", "Enable AI"),
-	DisableControl = Classes.TranslatedString:CreateFromKey("LLAICONTROL_UI_DisableControl", "Disable AI"),
-	EnableSummonControl = Classes.TranslatedString:CreateFromKey("LLAICONTROL_UI_EnableSummonControl", "Enable Automatic Summon AI"),
-	DisableSummonControl = Classes.TranslatedString:CreateFromKey("LLAICONTROL_UI_DisableSummonControl", "Disable Automatic Summon AI"),
+	EnableControl = Classes.TranslatedString:CreateFromKey("LLPARTYAI_UI_EnableControl", "Enable AI"),
+	DisableControl = Classes.TranslatedString:CreateFromKey("LLPARTYAI_UI_DisableControl", "Disable AI"),
+	EnableSummonControl = Classes.TranslatedString:CreateFromKey("LLPARTYAI_UI_EnableSummonControl", "Enable Automatic Summon AI"),
+	DisableSummonControl = Classes.TranslatedString:CreateFromKey("LLPARTYAI_UI_DisableSummonControl", "Disable Automatic Summon AI"),
 }
 
 local _cursorCharacterHandle = nil
@@ -87,8 +87,11 @@ UI.ContextMenu.Register.Action(Classes.ContextMenuAction:Create({
 	end
 }))
 
-Ext.RegisterNetListener("LLPARTYAI_SetArchetype", function (channel, payload, user)
-	local data = Ext.Json.Parse(payload)
+---@class LLPARTYAI_SetArchetype
+---@field NetID NetId
+---@field Archetype string
+
+GameHelpers.Net.Subscribe("LLPARTYAI_SetArchetype", function(e, data)
 	local target = GameHelpers.GetCharacter(data.NetID)
 	if target then
 		---@cast target EclCharacter
