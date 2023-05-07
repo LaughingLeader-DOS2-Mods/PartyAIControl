@@ -19,7 +19,7 @@
                 <node id="ModuleInfo">
                     <attribute id="Author" value="LaughingLeader" type="30" />
                     <attribute id="CharacterCreationLevelName" value="" type="22" />
-                    <attribute id="Description" value="Allows you to toggle AI control for party members and summons through the context menu. AI-controlled party members will avoid using more than 1 consumable per turn. Requires the Script Extender." type="30" />
+                    <attribute id="Description" value="Allows you to toggle AI control for party members and summons through the in-game context menu. AI-controlled party members will avoid using more than 1 consumable per turn. Requires the Script Extender." type="30" />
                     <attribute id="DescriptionName" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
                     <attribute id="DisplayName" value="" handle="ls::TranslatedStringRepository::s_HandleUnknown" type="28" />
                     <attribute id="Folder" value="PartyAIControl_47c9f413-b24e-451e-b40f-052ca037f890" type="30" />

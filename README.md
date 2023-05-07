@@ -1,7 +1,7 @@
 Party AI Control for Divinity: Original Sin 2 - Definitive Edition
 =======
 
-Allows you to toggle AI control for party members and summons through the context menu.  
+Allows you to toggle AI control for party members and summons through the in-game context menu.  
 
 Requires the Script Extender.
 
