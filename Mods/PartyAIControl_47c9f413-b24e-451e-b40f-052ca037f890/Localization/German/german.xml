@@ -1,8 +1,12 @@
 <contentList>
-	<content contentuid="h01b9444fg84ffg40deg9046g23f978f61ee9">Enable AI</content>
+	<content contentuid="h071df214g2dd8g4373g82deg5d9e0e1c9f77">Summon AI Enabled</content>
+	<content contentuid="h0f283111ge320g4dedga545g5f6e3e2fd7e5">AI Disabled</content>
+	<content contentuid="h401cb75bg1843g4df0ga65cg8a1800a49360">Disable AI</content>
 	<content contentuid="h71651c1ag549fg4a07g8f5dgdbcec7e88a60">Autonomous</content>
-	<content contentuid="h84631f74g439fg4fe9gb34ega548f6c26cc6">Disable AI</content>
-	<content contentuid="h86ef0410g55c8g4669g9289gd34c9f3b5bf3">Disable Automatic Summon AI</content>
+	<content contentuid="h73f20d63gb305g4ad8gab66gdaa32bd0cc75">Enable AI</content>
 	<content contentuid="h92daa097g1b66g428ag9658gaea3cc261d8b">Character is deciding their own actions in combat.</content>
-	<content contentuid="hcfcb6d74g2555g4b29g85b1gd7504975e08e">Enable Automatic Summon AI</content>
+	<content contentuid="h9c5fa656g5edcg4be4g8d89gca72e3562df9">Enable Automatic Summon AI</content>
+	<content contentuid="haaafe40fg1964g402dga8bag5d78d0f0a395">Disable Automatic Summon AI</content>
+	<content contentuid="hb619773agc12fg45a0gb5fbgda4d7da47a01">AI Enabled</content>
+	<content contentuid="hf44338fdge6e8g4620gb3b8gf8cec3e5b3bb">Summon AI Disabled</content>
 </contentList>
