@@ -14,6 +14,7 @@ Requires the [Script Extender](https://github.com/Norbyte/ositools) & [LeaderLib
 # Releases  
 
 * [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2972918315)
+* [Nexus](https://www.nexusmods.com/divinityoriginalsin2definitiveedition/mods/414)
 
 # Attribution  
 
