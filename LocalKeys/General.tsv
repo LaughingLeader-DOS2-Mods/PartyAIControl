@@ -9,4 +9,11 @@ LLPARTYAI_UI_EnableControl	Enable AI	he33027b0gf461g4677gaafdg3858d33350c4
 LLPARTYAI_UI_DisableControl	Disable AI	h70617f47g9c14g4672g9646ge7bfadf68d33
 LLPARTYAI_UI_EnableSummonControl	Enable Automatic Summon AI	h34f31fe6g4e10g4a5ag9d93g17c3007bc8c5
 LLPARTYAI_UI_DisableSummonControl	Disable Automatic Summon AI	hf7e5e584g9660g440bg980cg372851b72c06
-LLPARTYAI_UI_DisableSummonControl	Disable Automatic Summon AI	hf7e5e584g9660g440bg980cg372851b72c06
+LLPARTYAI_LimitConsumableUsageDisabled	Limit Consumable Usage	hf2a0e723gfc0eg4d65ga1d4gdb7cd8a2d93d
+LLPARTYAI_LimitConsumableUsageDisabled_Description	If enabled, party members under AI control will be restricted to only using the amount of consumables in the slider below per turn. This is to prevent the AI from chugging potions.	hf153be50g7db9g4926gaa75g3bbe92d60439
+LLPARTYAI_ChangeArchetypeDisabled	Change Archetype	h50d10608gf9aeg44dfgb77dg8e8b7b23fca3
+LLPARTYAI_ChangeArchetypeDisabled_Description	Party members under AI control will have their archetype changed to one that prioritizes some specific behavior (healing/resurrecting allies, avoiding reflection damage, buffing on the first turn). 	h64a14763g40c4g40c5gabe6ge008c2387757
+LLPARTYAI_Variable_ConsumableLimit	Consumable Limit 	hb043bfe2g8826g4780gb5c2g826f7f6bcbe6
+LLPARTYAI_Variable_ConsumableLimit_Description	If [Key:LLPARTYAI_LimitConsumableUsageDisabled:Limit Consumable Usage] is enabled, this is the number of consumeables to limit the AI to each turn. 	h5d280b78g8a2bg4068g83adg424803225519
+LLPARTYAI_Button_ClearTags	Clear Control 	h0f2d817ag0e37g4b66gbd35gd6b3c7e80538
+LLPARTYAI_Button_ClearTags_Description	Clear AI control from all characters under your control. 	h521ce5e6g2225g4442ga584g98026cb77c44

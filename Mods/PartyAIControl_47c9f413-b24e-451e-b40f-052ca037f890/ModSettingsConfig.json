@@ -1,0 +1,45 @@
+{
+	"TitleColor": "#00FFAF",
+	"Data": {
+		"Flags": [
+			{
+				"Type": "Global",
+				"Entries": [
+					"LLPARTYAI_ChangeArchetypeDisabled"
+				]
+			},
+			{
+				"Type": "User",
+				"Entries": [
+					"LLPARTYAI_LimitConsumableUsageDisabled"
+				]
+			}
+		],
+		"Variables": {
+			"NamePrefix": "LLPARTYAI_Variable_",
+			"Entries": {
+				"ConsumableLimit": {
+					"Value": 1,
+					"Min": -1,
+					"Max": 99
+				}
+			}
+		},
+		"Buttons": [
+			{
+				"ID" : "LLPARTYAI_Button_ClearTags",
+				"Callback": "LLPARTYAI_Settings_ClearAllTags"
+			}
+		]
+	},
+	"MenuOrder": [
+		{
+			"Entries": [
+				"LLPARTYAI_LimitConsumableUsage",
+				"ConsumableLimit",
+				"LLPARTYAI_ChangeArchetype",
+				"LLPARTYAI_ClearTags"
+			]
+		}
+	]
+}
