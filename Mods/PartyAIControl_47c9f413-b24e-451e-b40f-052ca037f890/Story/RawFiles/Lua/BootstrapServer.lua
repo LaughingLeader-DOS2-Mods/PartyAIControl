@@ -86,7 +86,7 @@ end)
 
 --Limit AI party member consumeable usage to 1 per turn, and the item must be in their inventory
 Events.Osiris.ProcBlockUseOfItem:Subscribe(function (e)
-	if e.Character:HasTag(AIManager.Vars.EnabledTag) then
+	if e.Character:HasTag(AIManager.Vars.EnabledTag) and GameHelpers.Combat.IsActiveTurn(e.Character) then
 		if GameHelpers.Item.IsConsumable(e.Item) then
 			if e.Character.NumConsumables > 0 then
 				return e:PreventAction()
