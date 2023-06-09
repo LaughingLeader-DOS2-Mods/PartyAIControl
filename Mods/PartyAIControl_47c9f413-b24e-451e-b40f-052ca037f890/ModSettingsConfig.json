@@ -37,9 +37,9 @@
 		{
 			"Entries": [
 				"LLPARTYAI_BlockMagicPocketsConsumables",
-				"LLPARTYAI_LimitConsumableUsage",
+				"LLPARTYAI_LimitConsumableUsageDisabled",
 				"ConsumableLimit",
-				"LLPARTYAI_ChangeArchetype",
+				"LLPARTYAI_ChangeArchetypeDisabled",
 				"LLPARTYAI_ClearTags"
 			]
 		}
