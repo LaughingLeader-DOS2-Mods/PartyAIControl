@@ -1,6 +1,7 @@
 <contentList>
 	<content contentuid="h071df214g2dd8g4373g82deg5d9e0e1c9f77">Summon AI Enabled</content>
 	<content contentuid="h0f283111ge320g4dedga545g5f6e3e2fd7e5">AI Disabled</content>
+	<content contentuid="h12f4619dgaf47g4e01ga4b8gc443ef08184e">Prevent AI-controlled characters from using items in other party member&apos;s inventories.</content>
 	<content contentuid="h3353d1a3g1edag40b4g9894g28de56b0de28">Limit Consumable Usage</content>
 	<content contentuid="h401cb75bg1843g4df0ga65cg8a1800a49360">Disable AI</content>
 	<content contentuid="h500dbb06gbe42g481ag9a06gdcbfdf30092a">Consumable Limit </content>
@@ -14,6 +15,7 @@
 	<content contentuid="haaafe40fg1964g402dga8bag5d78d0f0a395">Disable Automatic Summon AI</content>
 	<content contentuid="hb4c5f44bgfea6g4d67g985fg561708c00797">Clear AI control from all characters under your control. </content>
 	<content contentuid="hb619773agc12fg45a0gb5fbgda4d7da47a01">AI Enabled</content>
+	<content contentuid="hbf208675g163ag4401g8528g51db3652ca6a">Block Magic Pockets consumables</content>
 	<content contentuid="hc091eab1g829dg40cbgabf2gbc522fe7573f">Change Archetype</content>
 	<content contentuid="hc3765df9g2307g420cgb3e5g6427d5f8af75">Party members under AI control will have their archetype changed to one that prioritizes some specific behavior (healing/resurrecting allies, avoiding reflection damage, buffing on the first turn). </content>
 	<content contentuid="hf44338fdge6e8g4620gb3b8gf8cec3e5b3bb">Summon AI Disabled</content>
