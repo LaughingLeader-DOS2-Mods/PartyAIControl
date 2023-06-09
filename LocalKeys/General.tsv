@@ -11,7 +11,7 @@ LLPARTYAI_UI_EnableSummonControl	Enable Automatic Summon AI	h34f31fe6g4e10g4a5ag
 LLPARTYAI_UI_DisableSummonControl	Disable Automatic Summon AI	hf7e5e584g9660g440bg980cg372851b72c06
 LLPARTYAI_LimitConsumableUsageDisabled	Limit Consumable Usage	hf2a0e723gfc0eg4d65ga1d4gdb7cd8a2d93d
 LLPARTYAI_LimitConsumableUsageDisabled_Description	If enabled, party members under AI control will be restricted to only using the amount of consumables in the slider below per turn. This is to prevent the AI from chugging potions.	hf153be50g7db9g4926gaa75g3bbe92d60439
-LLPARTYAI_BlockMagicPocketsConsumables	Block Magic Pockets consumables	h57ea0068geed1g4cd5g9839gd5b6dd476968
+LLPARTYAI_BlockMagicPocketsConsumables	Block Party-Wide Consumables	h57ea0068geed1g4cd5g9839gd5b6dd476968
 LLPARTYAI_BlockMagicPocketsConsumables_Description	Prevent AI-controlled characters from using items in other party member's inventories.	h096e82bcgc5b9g4837g9161g9f5a41d5a66d
 LLPARTYAI_ChangeArchetypeDisabled	Change Archetype	h50d10608gf9aeg44dfgb77dg8e8b7b23fca3
 LLPARTYAI_ChangeArchetypeDisabled_Description	Party members under AI control will have their archetype changed to one that prioritizes some specific behavior (healing/resurrecting allies, avoiding reflection damage, buffing on the first turn). 	h64a14763g40c4g40c5gabe6ge008c2387757

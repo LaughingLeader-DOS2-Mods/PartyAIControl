@@ -15,7 +15,7 @@
 	<content contentuid="haaafe40fg1964g402dga8bag5d78d0f0a395">Disable Automatic Summon AI</content>
 	<content contentuid="hb4c5f44bgfea6g4d67g985fg561708c00797">Clear AI control from all characters under your control. </content>
 	<content contentuid="hb619773agc12fg45a0gb5fbgda4d7da47a01">AI Enabled</content>
-	<content contentuid="hbf208675g163ag4401g8528g51db3652ca6a">Block Magic Pockets consumables</content>
+	<content contentuid="hbf208675g163ag4401g8528g51db3652ca6a">Block Party-Wide Consumables</content>
 	<content contentuid="hc091eab1g829dg40cbgabf2gbc522fe7573f">Change Archetype</content>
 	<content contentuid="hc3765df9g2307g420cgb3e5g6427d5f8af75">Party members under AI control will have their archetype changed to one that prioritizes some specific behavior (healing/resurrecting allies, avoiding reflection damage, buffing on the first turn). </content>
 	<content contentuid="hf44338fdge6e8g4620gb3b8gf8cec3e5b3bb">Summon AI Disabled</content>
