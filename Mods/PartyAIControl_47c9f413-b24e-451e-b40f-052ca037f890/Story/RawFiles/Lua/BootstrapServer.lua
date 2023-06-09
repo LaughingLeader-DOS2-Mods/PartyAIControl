@@ -3,6 +3,9 @@ Ext.Require("Shared.lua")
 ---@param target EsvCharacter
 ---@param enabled boolean
 function AIManager.OverrideArchetype(target, enabled)
+	if GetSettings().Global:FlagEquals("LLPARTYAI_ChangeArchetypeDisabled", true) then
+		return
+	end
 	local archetype = "base"
 	if enabled then
 		archetype = "partyai"
@@ -60,41 +63,68 @@ function AIManager.UpdateStatus(target, isEnabled)
 	end
 end
 
-Ext.RegisterNetListener("LLPARTYAI_SetAIEnabled", function (channel, payload, user)
-	local data = Ext.Json.Parse(payload)
-	local target = GameHelpers.GetCharacter(data.NetID)
-	AIManager.SetControlEnabled(target, data.Enabled == true)
-end)
-
-Ext.RegisterNetListener("LLPARTYAI_SetAISummonsEnabled", function (channel, payload, user)
-	local data = Ext.Json.Parse(payload)
-	local target = GameHelpers.GetCharacter(data.NetID, "EsvCharacter")
-	if data.Enabled then
-		local displayStatusText = not target:HasTag(AIManager.Vars.EnabledSummonTag)
+---@param target EsvCharacter
+---@param enabled boolean
+---@param skipStatusText? boolean
+function AIManager.SetSummonControlEnabled(target, enabled, skipStatusText)
+	if enabled then
+		local displayStatusText = not skipStatusText and not target:HasTag(AIManager.Vars.EnabledSummonTag)
 		Osi.SetTag(target.MyGuid, AIManager.Vars.EnabledSummonTag)
 		if displayStatusText then
 			Osi.CharacterStatusText(target.MyGuid, "LLPARTYAI_StatusText_SummonsEnabled")
 		end
 	else
-		local displayStatusText = target:HasTag(AIManager.Vars.EnabledSummonTag)
+		local displayStatusText = not skipStatusText and target:HasTag(AIManager.Vars.EnabledSummonTag)
 		Osi.ClearTag(target.MyGuid, AIManager.Vars.EnabledSummonTag)
 		if displayStatusText then
 			Osi.CharacterStatusText(target.MyGuid, "LLPARTYAI_StatusText_SummonsDisabled")
 		end
 	end
+end
+
+---@class LLPARTYAI_SetAIEnabled
+---@field NetID NetId
+---@field Enabled boolean
+
+GameHelpers.Net.Subscribe("LLPARTYAI_SetAIEnabled", function (e, data)
+	local target = GameHelpers.GetCharacter(data.NetID)
+	assert(target ~= nil, "Failed to get character")
+	AIManager.SetControlEnabled(target, data.Enabled == true)
+end)
+
+---@class LLPARTYAI_SetAISummonsEnabled
+---@field NetID NetId
+---@field Enabled boolean
+
+GameHelpers.Net.Subscribe("LLPARTYAI_SetAISummonsEnabled", function (e, data)
+	local target = GameHelpers.GetCharacter(data.NetID, "EsvCharacter")
+	assert(target ~= nil, "Failed to get character")
+	AIManager.SetSummonControlEnabled(target, data.Enabled == true)
 end)
 
 --Limit AI party member consumeable usage to 1 per turn, and the item must be in their inventory
 Events.Osiris.ProcBlockUseOfItem:Subscribe(function (e)
-	if e.Character:HasTag(AIManager.Vars.EnabledTag) and GameHelpers.Combat.IsActiveTurn(e.Character) then
-		if GameHelpers.Item.IsConsumable(e.Item) then
-			if e.Character.NumConsumables > 0 then
-				return e:PreventAction()
+	if not e.Character.CharacterControl and e.Character:GetStatus(AIManager.Vars.Status) and GameHelpers.Combat.IsActiveTurn(e.Character) then
+		local settings = GetSettings()
+		if settings.Global:FlagEquals("LLPARTYAI_LimitConsumableUsageDisabled", true) then
+			return
+		end
+		local limit = settings.Global:GetVariable("ConsumableLimit", 1)
+		if limit > 0 then
+			if GameHelpers.Item.IsConsumable(e.Item) then
+				if e.Character.NumConsumables >= limit then
+					return e:PreventAction()
+				end
+				--Prevent magic pockets
+				if settings.Global:FlagEquals("LLPARTYAI_BlockMagicPocketsConsumables", true) then
+					local owner = GameHelpers.Item.GetOwner(e.Item)
+					if owner and owner ~= e.Character then
+						return e:PreventAction()
+					end
+				end
 			end
-			local owner = GameHelpers.Item.GetOwner(e.Item)
-			if owner and owner ~= e.Character then
-				return e:PreventAction()
-			end
+		else
+			return e:PreventAction()
 		end
 	end
 end)

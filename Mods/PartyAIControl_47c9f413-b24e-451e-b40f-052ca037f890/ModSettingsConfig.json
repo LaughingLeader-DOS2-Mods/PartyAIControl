@@ -5,7 +5,8 @@
 			{
 				"Type": "Global",
 				"Entries": [
-					"LLPARTYAI_ChangeArchetypeDisabled"
+					"LLPARTYAI_ChangeArchetypeDisabled",
+					"LLPARTYAI_BlockMagicPocketsConsumables"
 				]
 			},
 			{
@@ -20,7 +21,7 @@
 			"Entries": {
 				"ConsumableLimit": {
 					"Value": 1,
-					"Min": -1,
+					"Min": 0,
 					"Max": 99
 				}
 			}
@@ -35,6 +36,7 @@
 	"MenuOrder": [
 		{
 			"Entries": [
+				"LLPARTYAI_BlockMagicPocketsConsumables",
 				"LLPARTYAI_LimitConsumableUsage",
 				"ConsumableLimit",
 				"LLPARTYAI_ChangeArchetype",
